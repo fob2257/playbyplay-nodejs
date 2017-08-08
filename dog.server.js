@@ -2,7 +2,13 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/dogs', { useMongoClient: true })
+var options = {
+  useMongoClient: true,
+  server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
+  replset: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }
+};
+
+mongoose.connect('mongodb://localhost/dogs', options)
 var app = express()
 
 app.use(bodyParser.json())

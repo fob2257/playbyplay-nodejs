@@ -21,7 +21,7 @@ module.exports = function(app) {
                 // res.json({ 'info': 'dogs found!', 'data': dogs })
                 setTimeout(()=>{
                     res.json({ 'info': 'dogs found!', 'data': dogs })
-                }, 10000)
+                }, 5000)
             }
         })
     })

@@ -37,7 +37,7 @@ module.exports = function (app) {
                             }
                             if (!error && response.statusCode === 200) {
                                 callback(null, body)
-                                client.set('http://localhost:3001/dog', JSON.stringify(body), (error) => {
+                                client.setex('http://localhost:3001/dog', 30, JSON.stringify(body), (error) => {
                                     if (error) {
                                         throw error
                                     }
