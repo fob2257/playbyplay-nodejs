@@ -5,14 +5,22 @@
   "main": "pet.server.js",
   "dependencies": {
     "async": "^2.5.0",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.2",
     "lodash": "^4.17.4",
+    "moment": "^2.18.1",
     "mongoose": "^4.11.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "redis": "^2.8.0",
     "request": "^2.81.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "forever": "^0.15.3",
+    "nodemon": "^1.11.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
